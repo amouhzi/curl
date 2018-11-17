@@ -1,6 +1,13 @@
 language: php
 sudo: false
 
+before_install:
+    - composer self-update
+
+install:
+    - composer install
+    - ./bin/phpunit install
+
 matrix:
     fast_finish: true
     include:
